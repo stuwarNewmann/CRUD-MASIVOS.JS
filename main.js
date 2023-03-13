@@ -23,9 +23,14 @@ window.addEventListener('DOMContentLoaded',  async () => {
             //doc.data transforma el resultado en un objeto de js y no uno de firebase
             const node = doc.data();
             html += `
-            <div>
-                <h3>${node.node}</h3>
-                <p>${node.description}</p>
+            
+            <div class="card-body mt-3  col-md-6 border border-primary">
+                <h3 class="h5">${node.node}</h3>
+                    <p>${node.description}</p>
+                <div>
+                    <button class="bt btn-outline-danger">Delete</button>
+                    <button class="btn-warning">Edit</button>
+                </div>
             </div>
             `
         });
