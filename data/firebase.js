@@ -24,9 +24,9 @@ const analytics = getAnalytics(app);
 //Devuelve un objeto DB que es la conexion a la base de datos.
 const db = getFirestore();
 
-//Funcion que Guarda los datos en la base de datos.
-export const saveNode= (node, description) => {
-    addDoc(collection(db, 'nodes'), {node: node, description: description });
+//Funcion que Guarda los datos  relacionados a posibles masivos en Hfc en la base de datos.
+export const saveNodeHfc= (nodeInicio, sintoma, direction, mac, pruebas, numeroClientes, numeroServicio, numeroFalla ) => {
+    addDoc(collection(db, 'nodes'), {nodeInicio: nodeInicio, sintoma: sintoma, direction: direction, mac: mac, pruebas: pruebas, numeroClientes: numeroClientes, numeroServicio: numeroServicio, numeroFalla: numeroFalla});
 }
 //Funcion que hace una consulta al serviodor y trae los datos hasta ese momento.
 export const getNodes = () => getDocs(console.log('on get nodes'));

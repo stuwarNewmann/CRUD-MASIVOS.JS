@@ -1,6 +1,6 @@
 
 //Importe de funcion personalizada modularizada.
-import { saveNode, onGetNodes} from "./data/firebase.js"; 
+import { saveNodeHfc, onGetNodes} from "./data/firebase.js"; 
 
 
 
@@ -47,11 +47,18 @@ nodeForm.addEventListener('submit', (event) => {
     console.log('submited');
 
     //Seleccion de imput's
-    const node = nodeForm['node-title'];
-    const description = nodeForm['node-description'];
+    const nodeInicio = nodeForm['node-inicio'];
+    const sintoma = nodeForm['node-sintoma'];
+    const direction = nodeForm['node-direction'];
+    const mac = nodeForm['node-mac'];
+    const pruebas = nodeForm['node-pruebas'];
+    const numeroClientes = nodeForm['node-numero-clientes'];
+    const numeroServicio = nodeForm['node-service-number'];
+    const numeroFalla = nodeForm['node-falla'];
+
 
     //Metodo personalizado de guardado y reset del formulario.
-    saveNode(node.value, description.value);
+    saveNodeHfc(nodeInicio.value, sintoma.value, direction.value, mac.value, pruebas.value, numeroClientes.value, numeroServicio.value, numeroFalla.value);
     nodeForm.reset();
 });
 
