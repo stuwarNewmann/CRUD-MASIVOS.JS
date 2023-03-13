@@ -1,6 +1,8 @@
 
 //Importe de funcion personalizada modularizada.
-import { saveNodeHfc, onGetNodes} from "./data/firebase.js"; 
+import {  onGetNodes } from "./data/firebase.js";
+import {  saveNodeHfc } from "./data/dbHfc.js"; 
+
 
 
 
