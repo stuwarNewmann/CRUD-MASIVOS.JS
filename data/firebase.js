@@ -21,6 +21,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 //Devuelve un objeto DB que es la conexion a la base de datos.
 const db = getFirestore();
 

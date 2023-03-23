@@ -46,8 +46,13 @@
                         <form action="" id="node-form">
 
                             <div class="form-group mt-3 mb-2">
+                                <label for="title" class="form-label mb-4"></label>NODO O MSAM: </label>
+                                <input type="text" placeholder="Nodo O Msam" id="node-id" autofocus class="form-control">    
+                            </div>
+
+                            <div class="form-group mt-3 mb-2">
                                 <label for="title" class="form-label mb-4"></label>Posible Inicio del Masivo: </label>
-                                <input type="datetime-local" placeholder="Inicio" id="node-inicio" autofocus class="form-control">    
+                                <input type="datetime-local" placeholder="Inicio" id="node-inicio" class="form-control">    
                             </div>
 
                             <div class="form-group mt-3 mb-2">
@@ -86,11 +91,6 @@
                                 <input type="text" placeholder="Falla" id="node-falla"  class="form-control">    
                             </div>
                             
-                            <!-- <div class="form-group mt-3 mb-2">
-                                <label for="title" class="form-label mb-4"></label>ID NODE:</label>
-                                <input type="text" placeholder="ID NODE" id="node-title" autofocus class="form-control">    
-                            </div> -->
-                            
                             <div class="form-group mt-3 mb-2">
                                 <button id="btn-ndoe-save" class="btn btn-primary">Save</button>
                             </div>
@@ -103,6 +103,7 @@
 
 
     <script type="module" src="/main.js"></script>
+    <script type="module" src="../data/dbHfc.js"></script>
     <!-- bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- bootstrap JS -->
