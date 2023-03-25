@@ -6,7 +6,7 @@ const db = getFirestore()
 
 
 //Seleccion de Formulario y guardado de estado en una constante.
-const nodeForm = document.getElementById('node-form');
+export const nodeForm = document.getElementById('node-form');
 
 //Escucha del evento(Submit) y funcion asincrona que llama a fireStore para guardar datos.
 nodeForm.addEventListener('submit', (event) => {

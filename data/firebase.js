@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 //Importe de metodos de guardado, mediante el objeto collection; (*)Metodo getFirestore para conectar a la base de datos ofrecida por firebase. (*) Metodo collection es un generico que me indica la creacion de una nueva coleccion de datos. (*)Metodo addDoc para poder guardar un dato en la coleccion. (*)Metodo getDocs para obtener los datos de una coleccion. (*)Metodo onSnapshot para poder traer un dato en la coleccion cuando estos cambien.
-import { collection, getFirestore, addDoc, getDocs, onSnapshot } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"
+import { collection, getFirestore, deleteDoc, getDocs, getDoc, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js"
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -33,6 +33,13 @@ export const getNodes = () => getDocs(console.log('on get nodes'));
 
 //Funcion que hace una consulta al serviodor y trae los datos hasta ese momento despues de haber realizado algun cambio(HFC).
 export const onGetNodes = (changes) => onSnapshot(collection(db, 'nodes-hfc'), changes);
+
+//  Funcion que se conecta a un documento recibiendo la coleccion y el id, eliminando el id del documento que se quiere eliminar.
+export const deleteMasiivo = id => deleteDoc(doc(db, 'nodes-hfc', id));
+
+
+//Funcion que se conecta a un documento recibiendo la coleccion y el id, editando el id del documento que se quiere eliminar.
+export const editMasiivo = id => getDoc(doc(db, 'nodes-hfc', id));
 
 export {
   getFirestore
